@@ -16,6 +16,9 @@ class MutasiServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/Config/mutasi.php' => config_path('mutasi.php'),
         ], 'config');
+
+        //load migrations
+        $this->loadMigrationsFrom(__DIR__.'/Migrations');
     }
 
     /**
