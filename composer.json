@@ -6,11 +6,17 @@
         "guzzlehttp/guzzle": "^6.3"
     },
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Lugas Septiawan",
-            "email": "lugassawan@gmail.com"
-        }
+    "keywords": [
+        "laravel"
     ],
-    "minimum-stability": "stable"
+    "authors": [{
+        "name": "Lugas Septiawan",
+        "email": "lugassawan@gmail.com"
+    }],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Lugasdev\\Mutasi\\": "src/"
+        }
+    }
 }
