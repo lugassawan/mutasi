@@ -1,0 +1,16 @@
+{
+    "name": "lugasdev/mutasi",
+    "description": "Check mutation from bank",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lugas Septiawan",
+            "email": "lugassawan@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
