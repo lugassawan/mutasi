@@ -2,7 +2,7 @@
 
 return [
     //Dimas License Anda
-    'license' =>  env('DIMAS_LICENSE', ''),
+    'license' =>  env('DIMAS_LICENSE', 'license-test'),
 
     /*
         Ubah ke true tanpa tanda kutip jika ingin mengaktifkan atau false jika ingin menonatifkan

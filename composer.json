@@ -3,7 +3,8 @@
     "description": "Check mutation from bank",
     "type": "library",
     "require": {
-        "php": ">=5.5.*",
+        "php": ">=5.6.4",
+        "illuminate/support": "5.5.x|5.6.x|5.7.x",
         "guzzlehttp/guzzle": "^6.3"
     },
     "license": "MIT",

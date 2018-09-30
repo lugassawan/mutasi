@@ -31,8 +31,8 @@ class MutasiServiceProvider extends ServiceProvider
         //config
         $this->mergeConfigFrom(__DIR__.'/Config/mutasi.php', 'mutasi');
 
-        $this->app->bind('lugasdev-mutasi', function($app){
-            return new Mutasi;
+        $this->app->bind('lugasdev-mutasi', function(){
+            return new Mutasi();
         });
     }
 }
