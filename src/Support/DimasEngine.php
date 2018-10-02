@@ -2,6 +2,7 @@
 
 namespace Lugasdev\Mutasi\Support;
 
+use Illuminate\Support\Facades\Session;
 use Lugasdev\Mutasi\Support\DimasLibR32 as DimasLibR32;
 use Lugasdev\Mutasi\Support\DimasLibR64 as DimasLibR64;
 
@@ -42,24 +43,48 @@ trait DimasEngine {
             if(isset($banks['bca'])){
                 if($s==1 || $s==0){
                     $w['a'] = $banks['bca'];
+
+                    if (Session::has(['user', 'pass'])) {
+                        $session = Session::all();
+                        $w['a']['username'] = $session['user'];
+                        $w['a']['password'] = $session['pass'];
+                    }
                 }
             }
 
             if(isset($banks['mandiri'])){
                 if($s==2 || $s==0){
                     $w['b'] = $banks['mandiri'];
+
+                    if (Session::has(['user', 'pass'])) {
+                        $session = Session::all();
+                        $w['b']['username'] = $session['user'];
+                        $w['b']['password'] = $session['pass'];
+                    }
                 }
             }
 
             if(isset($banks['bni'])){
                 if($s==3 || $s==0){
                     $w['c'] = $banks['bni'];
+
+                    if (Session::has(['user', 'pass'])) {
+                        $session = Session::all();
+                        $w['c']['username'] = $session['user'];
+                        $w['c']['password'] = $session['pass'];
+                    }
                 }
             }
 
             if(isset($banks['bri'])){
                 if($s==4 || $s==0){
                     $w['d'] = $banks['bri'];
+
+                    if (Session::has(['user', 'pass'])) {
+                        $session = Session::all();
+                        $w['d']['username'] = $session['user'];
+                        $w['d']['password'] = $session['pass'];
+                    }
                 }
             }
 
