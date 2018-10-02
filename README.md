@@ -75,8 +75,23 @@ php artisan migrate
 To use this package just call the function.
 
 ```
-$data = Mutasi::cekMutasi('BCA'); //you can change BCA with 'Mandiri', 'BNI', 'BRI'
-return $data;
+example : yourdomain.com/BCA
+
+Route::get('/{case}', function ($case) {
+    return Mutasi::cekMutasi($case); //$case to store bank name such as 'BCA 'Mandiri', 'BNI', 'BRI'
+});
+```
+
+To use for test on development by passing credential bank using route
+
+```
+use Illuminate\Http\Request;
+
+Route::get('get/{case}', ['as' => '/get/{case}', 'uses' => function (Request $request, $case) {
+    $auth = $request->all();
+
+    return Mutasi::cekMutasiAuth($auth, $case);
+}]);
 ```
 
 ## Versioning
