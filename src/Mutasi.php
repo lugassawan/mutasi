@@ -2,6 +2,7 @@
 
 namespace Lugasdev\Mutasi;
 
+use Illuminate\Support\Facades\Session;
 use Lugasdev\Mutasi\Support\DimasEngine as DimasEngine;
 
 class Mutasi {
@@ -35,5 +36,17 @@ class Mutasi {
             $data = $this->c($bank);
             return $data;
         }
+    }
+
+    //Check mutation by passing auth using method get
+    public function cekMutasiAuth($auth, $bank, $s = 0)
+    {
+        //store session to get data
+        Session::put($auth);
+        $data = $this->cekMutasi($bank); 
+        
+        //delete session after get data
+        Session::flush();
+        return $data;
     }
 }
